@@ -1,18 +1,54 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 header{
-    background-color: blue;
+    background-color: rgb(18, 18, 138);
     color: white;
     padding: 14px;
     
 }
 
+header > .container{
+    justify-content: space-between;
+}
 
-.nav{
-    background-color: aliceblue;
-    margin-top: 8px;
-    padding: 6px;
+
+nav{
+    background-color: rgb(99, 75, 238);
+    padding: 16px  0;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menuHamburguer{
+    width: 32px;
+}
+
+.menuHamburguer span{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    margin-bottom: 4px;
 }
