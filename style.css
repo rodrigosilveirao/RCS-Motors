@@ -4,6 +4,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 .container{
     max-width: 1024px;
     width: 100%;
@@ -18,7 +22,6 @@ header{
 }
 
 header > .container{
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 14px;
@@ -28,6 +31,7 @@ header > .container{
 nav{
     background-color: rgb(99, 75, 238);
     padding: 16px  0;
+    display: none;
 }
 
 nav li{
@@ -46,6 +50,7 @@ nav li a{
 
 .menuHamburguer{
     width: 32px;
+    cursor: pointer;
 }
 
 .menuHamburguer span{
@@ -54,4 +59,35 @@ nav li a{
     background-color: white;
     display: block;
     margin-bottom: 4px;
+}
+
+.container-flex{
+    display: flex;
+}
+
+#sobreNos img{
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+.lista-veiculos li{
+    list-style: none;
+    max-width: 30%;
+}
+
+
+.lista-veiculos img{
+    max-width: 100%;
+}
+
+.lista-veiculos h3{
+    margin: 16px 0;
 }
