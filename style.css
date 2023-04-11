@@ -78,16 +78,83 @@ section h2{
     margin-bottom: 16px;
 }
 
+.lista-veiculos{
+    flex-wrap: wrap;
+}
+
 .lista-veiculos li{
     list-style: none;
     max-width: 30%;
+    margin-bottom: 28px;
 }
 
 
-.lista-veiculos img{
+.lista-veiculos li img{
     max-width: 100%;
 }
 
-.lista-veiculos h3{
+.lista-veiculos li h3{
     margin: 16px 0;
+}
+
+.itemCentral{
+    margin: 0 5%;
+}
+
+.lista-veiculos li button{
+    display: block;
+    background-color: rgb(12, 176, 78);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.lista-veiculos li button:hover{
+    background-color: rgb(6, 107, 46);
+}
+
+.price, strong{
+    display: block;
+    margin: 13px 0;
+}
+
+.lista-veiculos li del{
+    color: gray;
+    font-size: 14px;
+}
+
+.formCampo label{
+    display: block;
+    font-weight: bold;
+}
+
+.formCampo input,
+.formCampo textarea{
+    width: 100%;
+    padding: 8px;  
+}
+
+.formCampo textarea{
+    resize: none;
+    height: 120%;
+}
+
+form button{
+    display: block;
+    background-color: rgb(12, 176, 78);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: rgb(6, 107, 46);
+}
+
+form{
+    max-width: 360px;
 }
