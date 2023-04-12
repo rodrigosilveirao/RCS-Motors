@@ -13,15 +13,21 @@ html{
     width: 100%;
     margin: 0 auto;
 }
-
 header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+header, footer{
     background-color: rgb(18, 18, 138);
     color: white;
     padding-top: 14px;
     
 }
 
-header > .container{
+header > .container,
+footer > .container{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 14px;
@@ -132,13 +138,14 @@ section h2{
 
 .formCampo input,
 .formCampo textarea{
+    display: block;
     width: 100%;
     padding: 8px;  
 }
 
 .formCampo textarea{
     resize: none;
-    height: 120%;
+    height: 120px;
 }
 
 form button{
@@ -149,6 +156,7 @@ form button{
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    max-width: 120px;
 }
 
 form button:hover{
@@ -158,3 +166,13 @@ form button:hover{
 form{
     max-width: 360px;
 }
+
+footer .container li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer .container img{
+    height: 30px;
+}
+
