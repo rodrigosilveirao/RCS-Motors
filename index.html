@@ -204,25 +204,25 @@
             <form>
                 <div class="formCampo">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome">
+                    <input type="text" id="nome" name="nome">
                 </div>
                 <div class="formCampo">
                     <label for="telefone">Telefone:</label>
-                    <input type="tell" id="telefone">
+                    <input type="tell" id="telefone" name="telefone">
                 </div>
                 <div class="formCampo">
                     <label for="email">Email:</label>
-                    <input type="text" id="email">
+                    <input type="text" id="email" name="email">
                 </div>
                 <div class="formCampo">
                     <label for="carroDeInteresse">Carro De Interesse:</label>
-                    <input type="text" id="carroDeInteresse">
+                    <input type="text" id="carroDeInteresse" name="carroDeInteresse">
                 </div>
                 <div class="formCampo">
                     <label for="obs">Observações:</label>
-                    <textarea id="obs"></textarea>
+                    <textarea id="obs" name="obs"></textarea>
                 </div>
-                <button id="btnForm" type="button">Enviar</button>
+                <button id="btnForm" type="submit">Enviar</button>
             </form>
 
         </div>
@@ -263,6 +263,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
 
     <script>
         $(document).ready(function(){
@@ -276,6 +278,43 @@
             })
 
             $("#telefone").mask('(00) 00000-0000')
+
+            $('form').validate({
+                rules: {
+                    nome:  {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telefone: {
+                        required: true,
+                    },
+                    carroDeInteresse: {
+                        required: false,
+                    },
+                    obs: {
+                        required: true,
+                    }
+                },
+                messages: {
+                    nome: 'Por favor, insire seu nome!',
+                    email: 'Por favor, insire seu email!',
+                    telefone: 'Por favor, insire seu telefone!',
+                    obs: 'Por favor, insire sua observacao!'
+                },
+                submitHandler: function(form) {
+                    console.log(form)
+                },
+                invalidHandler: function(evento, validador){
+                    let camposIncorretos = validador.numberOfInvalids();
+                    if (camposIncorretos){
+                        alert(`Existem ${camposIncorretos} campos incorretos.`)
+                    }
+                }
+            
+            })
         })
     </script>
 
