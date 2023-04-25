@@ -47,11 +47,11 @@ $(document).ready(function(){
     
     })
 
-    $('lista-veiculos button').click(function(){
+    $('.lista-veiculos button').click(function(){
         const destino = $('#contato');
-    const nomeVeiculo = $(this).parent().find('h3').text();
+        const nomeVeiculo = $(this).parent().find('h3').text();
 
-    $('#carroDeInteresse').val(nomeVeiculo);
+    $('#carroDeInteresse').val(nomeVeiculo); 
 
         $('html').animate({
             scrollTop: destino.offset().top
