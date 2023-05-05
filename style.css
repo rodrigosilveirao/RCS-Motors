@@ -175,3 +175,44 @@ footer .container li{
 footer .container img{
     height: 30px;
 }
+
+@media screen and (max-width: 896px){
+    .container{
+        max-width: 95%;
+        display: block;
+    }
+    .lista-veiculos{
+        display: block;
+    }
+    .lista-veiculos li{
+        max-width: 95%;
+        margin-bottom: 28px;
+    }
+    .itemCentral{
+        margin: 0 ;
+    }
+
+    }
+     
+   /* @media screen and (max-width: 1023px){
+        .container{
+            max-width: 95%;
+            display: block;
+        }
+        .sobreNos{
+            overflow: hidden ;
+            height: 1023px;
+           
+        }
+        .lista-veiculos{
+            display: block;
+        }
+        .lista-veiculos li{
+            max-width: 50%;
+            margin-bottom: 28px;
+        }
+        .itemCentral{
+            margin: 0 ;
+        }
+        }
+      
