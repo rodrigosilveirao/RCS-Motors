@@ -4,6 +4,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+
 html{
     overflow-x: hidden;
 }
@@ -90,8 +92,8 @@ section h2{
 
 .lista-veiculos li{
     list-style: none;
-    max-width: 30%;
-    margin-bottom: 28px;
+    max-width: 22%;
+    margin: 28px 8px;
 }
 
 
@@ -176,7 +178,7 @@ footer .container img{
     height: 30px;
 }
 
-@media screen and (max-width: 896px){
+@media screen and (max-width: 768px){
     .container{
         max-width: 95%;
         display: block;
@@ -193,11 +195,13 @@ footer .container img{
     }
 
     }
+
+    
      
-   /* @media screen and (max-width: 1023px){
+    @media screen and (max-width: 1023px){
         .container{
             max-width: 95%;
-            display: block;
+            flex-wrap: wrap;
         }
         .sobreNos{
             overflow: hidden ;
@@ -205,10 +209,10 @@ footer .container img{
            
         }
         .lista-veiculos{
-            display: block;
+            flex-wrap: wrap;
         }
         .lista-veiculos li{
-            max-width: 50%;
+            max-width: 45%;
             margin-bottom: 28px;
         }
         .itemCentral{
